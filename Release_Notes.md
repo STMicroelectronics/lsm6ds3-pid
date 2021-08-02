@@ -38,7 +38,7 @@ This directory contains the LSM6DS3 component drivers.
 
 ### First release
 
-- First official release
+- First official release [ref. DS v10.0]
 
 ##
 
