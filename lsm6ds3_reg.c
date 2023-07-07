@@ -1166,7 +1166,7 @@ int32_t lsm6ds3_status_reg_get(stmdev_ctx_t *ctx,
 {
   int32_t ret;
 
-  ret = lsm6ds3_read_reg(ctx, LSM6DS3_STATUS_REG, (uint8_t *)&val, 1);
+  ret = lsm6ds3_read_reg(ctx, LSM6DS3_STATUS_REG, (uint8_t *)val, 1);
 
   return ret;
 }
@@ -4066,7 +4066,7 @@ int32_t lsm6ds3_fifo_watermark_set(stmdev_ctx_t *ctx, uint16_t val)
 
   if (ret == 0)
   {
-    fifo_ctrl1.fth = (uint8_t)(val & 0x00FF0U);
+    fifo_ctrl1.fth = (uint8_t)(val & 0x00FFU);
     ret = lsm6ds3_write_reg(ctx, LSM6DS3_FIFO_CTRL1,
                             (uint8_t *)&fifo_ctrl1, 1);
   }
