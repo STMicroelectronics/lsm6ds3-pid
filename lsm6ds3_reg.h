@@ -268,13 +268,11 @@ typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
   uint8_t orient                      : 3;
-uint8_t sign_g                      :
-  3;  /* SignX_G) + SignY_G + SignZ_G */
+  uint8_t sign_g                      : 3;  /* SignX_G) + SignY_G + SignZ_G */
   uint8_t not_used_01                 : 2;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
   uint8_t not_used_01                 : 2;
-uint8_t sign_g                      :
-  3;  /* SignX_G) + SignY_G + SignZ_G */
+  uint8_t sign_g                      : 3;  /* SignX_G) + SignY_G + SignZ_G */
   uint8_t orient                      : 3;
 #endif /* DRV_BYTE_ORDER */
 } lsm6ds3_orient_cfg_g_t;
@@ -426,11 +424,9 @@ typedef struct
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
   uint8_t not_used_01                 : 4;
   uint8_t xl_hm_mode                  : 1;
-uint8_t den_mode                    :
-  3;  /* trig_en + lvl1_en + lvl2_en */
+  uint8_t den_mode                    : 3;  /* trig_en + lvl1_en + lvl2_en */
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-uint8_t den_mode                    :
-  3;  /* trig_en + lvl1_en + lvl2_en */
+  uint8_t den_mode                    : 3;  /* trig_en + lvl1_en + lvl2_en */
   uint8_t xl_hm_mode                  : 1;
   uint8_t not_used_01                 : 4;
 #endif /* DRV_BYTE_ORDER */
