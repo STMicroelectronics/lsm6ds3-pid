@@ -1,5 +1,7 @@
 ![latest tag](https://img.shields.io/github/v/tag/STMicroelectronics/lsm6ds3-pid.svg?color=brightgreen)
 
+(**This device is obsolete and no longer maintained**)
+
 # 1 - Introduction
 
 Sensor driver for LSM6DS3 sensor written in C programming language. This repository contains the sensor driver files (.h and .c) to be included, or linked directly as a git submodule, in your project. The driver is MISRA compliant and the documentation can be generated using the [Doxygen](http://www.doxygen.org/) tool.
