@@ -5210,11 +5210,6 @@ int32_t lsm6ds3_pedo_sens_set(const stmdev_ctx_t *ctx, uint8_t val)
 
   if (ret == 0)
   {
-    ret = lsm6ds3_read_reg(ctx, LSM6DS3_TAP_CFG, (uint8_t *)&tap_cfg, 1);
-  }
-
-  if (ret == 0)
-  {
     tap_cfg.pedo_en = (uint8_t)val;
     ret = lsm6ds3_write_reg(ctx, LSM6DS3_TAP_CFG, (uint8_t *)&tap_cfg, 1);
   }
