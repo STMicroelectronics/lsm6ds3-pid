@@ -211,27 +211,27 @@ int32_t lsm6ds3_gy_data_orient_get(const stmdev_ctx_t *ctx,
 
   switch (orient_cfg_g.orient)
   {
-    case LSM6DS3_GY_ORIENT_XYZ:
+    case 0x00:
       *val = LSM6DS3_GY_ORIENT_XYZ;
       break;
 
-    case LSM6DS3_GY_ORIENT_XZY:
+    case 0x01:
       *val = LSM6DS3_GY_ORIENT_XZY;
       break;
 
-    case LSM6DS3_GY_ORIENT_YXZ:
+    case 0x02:
       *val = LSM6DS3_GY_ORIENT_YXZ;
       break;
 
-    case LSM6DS3_GY_ORIENT_YZX:
+    case 0x03:
       *val = LSM6DS3_GY_ORIENT_YZX;
       break;
 
-    case LSM6DS3_GY_ORIENT_ZXY:
+    case 0x04:
       *val = LSM6DS3_GY_ORIENT_ZXY;
       break;
 
-    case LSM6DS3_GY_ORIENT_ZYX:
+    case 0x05:
       *val = LSM6DS3_GY_ORIENT_ZYX;
       break;
 
@@ -291,35 +291,35 @@ int32_t lsm6ds3_gy_data_sign_get(const stmdev_ctx_t *ctx,
 
   switch (orient_cfg_g.sign_g)
   {
-    case LSM6DS3_GY_SIGN_PPP:
+    case 0x00:
       *val = LSM6DS3_GY_SIGN_PPP;
       break;
 
-    case LSM6DS3_GY_SIGN_PPN:
+    case 0x01:
       *val = LSM6DS3_GY_SIGN_PPN;
       break;
 
-    case LSM6DS3_GY_SIGN_PNP:
+    case 0x02:
       *val = LSM6DS3_GY_SIGN_PNP;
       break;
 
-    case LSM6DS3_GY_SIGN_NPP:
+    case 0x04:
       *val = LSM6DS3_GY_SIGN_NPP;
       break;
 
-    case LSM6DS3_GY_SIGN_NNP:
+    case 0x06:
       *val = LSM6DS3_GY_SIGN_NNP;
       break;
 
-    case LSM6DS3_GY_SIGN_NPN:
+    case 0x05:
       *val = LSM6DS3_GY_SIGN_NPN;
       break;
 
-    case LSM6DS3_GY_SIGN_PNN:
+    case 0x03:
       *val = LSM6DS3_GY_SIGN_PNN;
       break;
 
-    case LSM6DS3_GY_SIGN_NNN:
+    case 0x07:
       *val = LSM6DS3_GY_SIGN_NNN;
       break;
 
@@ -376,19 +376,19 @@ int32_t lsm6ds3_xl_full_scale_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl1_xl.fs_xl)
   {
-    case LSM6DS3_2g:
+    case 0x00:
       *val = LSM6DS3_2g;
       break;
 
-    case LSM6DS3_16g:
+    case 0x01:
       *val = LSM6DS3_16g;
       break;
 
-    case LSM6DS3_4g:
+    case 0x02:
       *val = LSM6DS3_4g;
       break;
 
-    case LSM6DS3_8g:
+    case 0x03:
       *val = LSM6DS3_8g;
       break;
 
@@ -445,47 +445,47 @@ int32_t lsm6ds3_xl_data_rate_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl1_xl.odr_xl)
   {
-    case LSM6DS3_XL_ODR_OFF:
+    case 0x00:
       *val = LSM6DS3_XL_ODR_OFF;
       break;
 
-    case LSM6DS3_XL_ODR_12Hz5:
+    case 0x01:
       *val = LSM6DS3_XL_ODR_12Hz5;
       break;
 
-    case LSM6DS3_XL_ODR_26Hz:
+    case 0x02:
       *val = LSM6DS3_XL_ODR_26Hz;
       break;
 
-    case LSM6DS3_XL_ODR_52Hz:
+    case 0x03:
       *val = LSM6DS3_XL_ODR_52Hz;
       break;
 
-    case LSM6DS3_XL_ODR_104Hz:
+    case 0x04:
       *val = LSM6DS3_XL_ODR_104Hz;
       break;
 
-    case LSM6DS3_XL_ODR_208Hz:
+    case 0x05:
       *val = LSM6DS3_XL_ODR_208Hz;
       break;
 
-    case LSM6DS3_XL_ODR_416Hz:
+    case 0x06:
       *val = LSM6DS3_XL_ODR_416Hz;
       break;
 
-    case LSM6DS3_XL_ODR_833Hz:
+    case 0x07:
       *val = LSM6DS3_XL_ODR_833Hz;
       break;
 
-    case LSM6DS3_XL_ODR_1k66Hz:
+    case 0x08:
       *val = LSM6DS3_XL_ODR_1k66Hz;
       break;
 
-    case LSM6DS3_XL_ODR_3k33Hz:
+    case 0x09:
       *val = LSM6DS3_XL_ODR_3k33Hz;
       break;
 
-    case LSM6DS3_XL_ODR_6k66Hz:
+    case 0x0A:
       *val = LSM6DS3_XL_ODR_6k66Hz;
       break;
 
@@ -542,23 +542,23 @@ int32_t lsm6ds3_gy_full_scale_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl2_g.fs_g)
   {
-    case LSM6DS3_250dps:
+    case 0x00:
       *val = LSM6DS3_250dps;
       break;
 
-    case LSM6DS3_125dps:
+    case 0x01:
       *val = LSM6DS3_125dps;
       break;
 
-    case LSM6DS3_500dps:
+    case 0x02:
       *val = LSM6DS3_500dps;
       break;
 
-    case LSM6DS3_1000dps:
+    case 0x04:
       *val = LSM6DS3_1000dps;
       break;
 
-    case LSM6DS3_2000dps:
+    case 0x06:
       *val = LSM6DS3_2000dps;
       break;
 
@@ -615,39 +615,39 @@ int32_t lsm6ds3_gy_data_rate_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl2_g.odr_g)
   {
-    case LSM6DS3_GY_ODR_OFF:
+    case 0x00:
       *val = LSM6DS3_GY_ODR_OFF;
       break;
 
-    case LSM6DS3_GY_ODR_12Hz5:
+    case 0x01:
       *val = LSM6DS3_GY_ODR_12Hz5;
       break;
 
-    case LSM6DS3_GY_ODR_26Hz:
+    case 0x02:
       *val = LSM6DS3_GY_ODR_26Hz;
       break;
 
-    case LSM6DS3_GY_ODR_52Hz:
+    case 0x03:
       *val = LSM6DS3_GY_ODR_52Hz;
       break;
 
-    case LSM6DS3_GY_ODR_104Hz:
+    case 0x04:
       *val = LSM6DS3_GY_ODR_104Hz;
       break;
 
-    case LSM6DS3_GY_ODR_208Hz:
+    case 0x05:
       *val = LSM6DS3_GY_ODR_208Hz;
       break;
 
-    case LSM6DS3_GY_ODR_416Hz:
+    case 0x06:
       *val = LSM6DS3_GY_ODR_416Hz;
       break;
 
-    case LSM6DS3_GY_ODR_833Hz:
+    case 0x07:
       *val = LSM6DS3_GY_ODR_833Hz;
       break;
 
-    case LSM6DS3_GY_ODR_1k66Hz:
+    case 0x08:
       *val = LSM6DS3_GY_ODR_1k66Hz;
       break;
 
@@ -750,11 +750,11 @@ int32_t lsm6ds3_xl_power_mode_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl6_c.xl_hm_mode)
   {
-    case  LSM6DS3_XL_HIGH_PERFORMANCE:
+    case 0x00:
       *val =  LSM6DS3_XL_HIGH_PERFORMANCE;
       break;
 
-    case LSM6DS3_XL_NORMAL:
+    case 0x01:
       *val = LSM6DS3_XL_NORMAL;
       break;
 
@@ -811,11 +811,11 @@ int32_t lsm6ds3_rounding_on_status_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl7_g.rounding_status)
   {
-    case LSM6DS3_STAT_RND_DISABLE:
+    case 0x00:
       *val = LSM6DS3_STAT_RND_DISABLE;
       break;
 
-    case LSM6DS3_STAT_RND_ENABLE:
+    case 0x01:
       *val = LSM6DS3_STAT_RND_ENABLE;
       break;
 
@@ -872,11 +872,11 @@ int32_t lsm6ds3_gy_power_mode_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl7_g.g_hm_mode)
   {
-    case  LSM6DS3_GY_HIGH_PERFORMANCE:
-      *val =  LSM6DS3_GY_HIGH_PERFORMANCE;
+    case 0x00:
+      *val = LSM6DS3_GY_HIGH_PERFORMANCE;
       break;
 
-    case LSM6DS3_GY_NORMAL:
+    case 0x01:
       *val = LSM6DS3_GY_NORMAL;
       break;
 
@@ -1447,11 +1447,11 @@ int32_t lsm6ds3_timestamp_res_get(const stmdev_ctx_t *ctx,
 
   switch (wake_up_dur.timer_hr)
   {
-    case LSM6DS3_LSB_6ms4:
+    case 0x00:
       *val = LSM6DS3_LSB_6ms4;
       break;
 
-    case LSM6DS3_LSB_25us:
+    case 0x01:
       *val = LSM6DS3_LSB_25us;
       break;
 
@@ -1522,35 +1522,35 @@ int32_t lsm6ds3_rounding_mode_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl5_c.rounding)
   {
-    case LSM6DS3_ROUND_DISABLE:
+    case 0x00:
       *val = LSM6DS3_ROUND_DISABLE;
       break;
 
-    case LSM6DS3_ROUND_XL:
+    case 0x01:
       *val = LSM6DS3_ROUND_XL;
       break;
 
-    case LSM6DS3_ROUND_GY:
+    case 0x02:
       *val = LSM6DS3_ROUND_GY;
       break;
 
-    case LSM6DS3_ROUND_GY_XL:
+    case 0x03:
       *val = LSM6DS3_ROUND_GY_XL;
       break;
 
-    case LSM6DS3_ROUND_SH1_TO_SH6:
+    case 0x04:
       *val = LSM6DS3_ROUND_SH1_TO_SH6;
       break;
 
-    case  LSM6DS3_ROUND_XL_SH1_TO_SH6:
+    case 0x05:
       *val =  LSM6DS3_ROUND_XL_SH1_TO_SH6;
       break;
 
-    case  LSM6DS3_ROUND_GY_XL_SH1_TO_SH12:
+    case 0x06:
       *val =  LSM6DS3_ROUND_GY_XL_SH1_TO_SH12;
       break;
 
-    case  LSM6DS3_ROUND_GY_XL_SH1_TO_SH6:
+    case 0x07:
       *val =  LSM6DS3_ROUND_GY_XL_SH1_TO_SH6;
       break;
 
@@ -1772,11 +1772,11 @@ int32_t lsm6ds3_mem_bank_get(const stmdev_ctx_t *ctx,
 
   switch (func_cfg_access.func_cfg_en)
   {
-    case LSM6DS3_USER_BANK:
+    case 0x00:
       *val = LSM6DS3_USER_BANK;
       break;
 
-    case LSM6DS3_EMBEDDED_FUNC_BANK:
+    case 0x01:
       *val = LSM6DS3_EMBEDDED_FUNC_BANK;
       break;
 
@@ -1894,11 +1894,11 @@ int32_t lsm6ds3_data_format_get(const stmdev_ctx_t *ctx, lsm6ds3_ble_t *val)
 
   switch (ctrl3_c.ble)
   {
-    case LSM6DS3_LSB_AT_LOW_ADD:
+    case 0x00:
       *val = LSM6DS3_LSB_AT_LOW_ADD;
       break;
 
-    case LSM6DS3_MSB_AT_LOW_ADD:
+    case 0x01:
       *val = LSM6DS3_MSB_AT_LOW_ADD;
       break;
 
@@ -2049,15 +2049,15 @@ int32_t lsm6ds3_xl_self_test_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl5_c.st_xl)
   {
-    case LSM6DS3_XL_ST_DISABLE:
+    case 0x00:
       *val = LSM6DS3_XL_ST_DISABLE;
       break;
 
-    case LSM6DS3_XL_ST_POSITIVE:
+    case 0x01:
       *val = LSM6DS3_XL_ST_POSITIVE;
       break;
 
-    case LSM6DS3_XL_ST_NEGATIVE:
+    case 0x02:
       *val = LSM6DS3_XL_ST_NEGATIVE;
       break;
 
@@ -2114,15 +2114,15 @@ int32_t lsm6ds3_gy_self_test_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl5_c.st_g)
   {
-    case LSM6DS3_GY_ST_DISABLE:
+    case 0x00:
       *val = LSM6DS3_GY_ST_DISABLE;
       break;
 
-    case LSM6DS3_GY_ST_POSITIVE:
+    case 0x01:
       *val = LSM6DS3_GY_ST_POSITIVE;
       break;
 
-    case LSM6DS3_GY_ST_NEGATIVE:
+    case 0x03:
       *val = LSM6DS3_GY_ST_NEGATIVE;
       break;
 
@@ -2242,19 +2242,19 @@ int32_t lsm6ds3_gy_hp_bandwidth_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl7_g.hpcf_g)
   {
-    case LSM6DS3_HP_CUT_OFF_8mHz1:
+    case 0x00:
       *val = LSM6DS3_HP_CUT_OFF_8mHz1;
       break;
 
-    case LSM6DS3_HP_CUT_OFF_32mHz4:
+    case 0x01:
       *val = LSM6DS3_HP_CUT_OFF_32mHz4;
       break;
 
-    case LSM6DS3_HP_CUT_OFF_2Hz07:
+    case 0x02:
       *val = LSM6DS3_HP_CUT_OFF_2Hz07;
       break;
 
-    case LSM6DS3_HP_CUT_OFF_16Hz32:
+    case 0x03:
       *val = LSM6DS3_HP_CUT_OFF_16Hz32;
       break;
 
@@ -2360,19 +2360,19 @@ int32_t lsm6ds3_xl_hp_bandwidth_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl8_xl.hpcf_xl)
   {
-    case LSM6DS3_XL_HP_ODR_DIV_4:
+    case 0x00:
       *val = LSM6DS3_XL_HP_ODR_DIV_4;
       break;
 
-    case LSM6DS3_XL_HP_ODR_DIV_100:
+    case 0x01:
       *val = LSM6DS3_XL_HP_ODR_DIV_100;
       break;
 
-    case LSM6DS3_XL_HP_ODR_DIV_9:
+    case 0x02:
       *val = LSM6DS3_XL_HP_ODR_DIV_9;
       break;
 
-    case LSM6DS3_XL_HP_ODR_DIV_400:
+    case 0x03:
       *val = LSM6DS3_XL_HP_ODR_DIV_400;
       break;
 
@@ -2432,19 +2432,19 @@ int32_t lsm6ds3_xl_lp2_bandwidth_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl8_xl.hpcf_xl)
   {
-    case LSM6DS3_XL_LP_ODR_DIV_50:
+    case 0x00:
       *val = LSM6DS3_XL_LP_ODR_DIV_50;
       break;
 
-    case LSM6DS3_XL_LP_ODR_DIV_100:
+    case 0x01:
       *val = LSM6DS3_XL_LP_ODR_DIV_100;
       break;
 
-    case LSM6DS3_XL_LP_ODR_DIV_9:
+    case 0x02:
       *val = LSM6DS3_XL_LP_ODR_DIV_9;
       break;
 
-    case LSM6DS3_XL_LP_ODR_DIV_400:
+    case 0x03:
       *val = LSM6DS3_XL_LP_ODR_DIV_400;
       break;
 
@@ -2501,19 +2501,19 @@ int32_t lsm6ds3_xl_filter_analog_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl1_xl.bw_xl)
   {
-    case  LSM6DS3_ANTI_ALIASING_400Hz:
+    case 0x00:
       *val =  LSM6DS3_ANTI_ALIASING_400Hz;
       break;
 
-    case  LSM6DS3_ANTI_ALIASING_200Hz:
+    case 0x01:
       *val =  LSM6DS3_ANTI_ALIASING_200Hz;
       break;
 
-    case  LSM6DS3_ANTI_ALIASING_100Hz:
+    case 0x02:
       *val =  LSM6DS3_ANTI_ALIASING_100Hz;
       break;
 
-    case LSM6DS3_ANTI_ALIASING_50Hz:
+    case 0x03:
       *val = LSM6DS3_ANTI_ALIASING_50Hz;
       break;
 
@@ -2581,11 +2581,11 @@ int32_t lsm6ds3_spi_mode_get(const stmdev_ctx_t *ctx, lsm6ds3_sim_t *val)
 
   switch (ctrl3_c.sim)
   {
-    case LSM6DS3_SPI_4_WIRE:
+    case 0x00:
       *val = LSM6DS3_SPI_4_WIRE;
       break;
 
-    case LSM6DS3_SPI_3_WIRE:
+    case 0x01:
       *val = LSM6DS3_SPI_3_WIRE;
       break;
 
@@ -2642,11 +2642,11 @@ int32_t lsm6ds3_i2c_interface_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl4_c.i2c_disable)
   {
-    case LSM6DS3_I2C_ENABLE:
+    case 0x00:
       *val = LSM6DS3_I2C_ENABLE;
       break;
 
-    case LSM6DS3_I2C_DISABLE:
+    case 0x01:
       *val = LSM6DS3_I2C_DISABLE;
       break;
 
@@ -2915,11 +2915,11 @@ int32_t lsm6ds3_pin_mode_get(const stmdev_ctx_t *ctx, lsm6ds3_pp_od_t *val)
 
   switch (ctrl3_c.pp_od)
   {
-    case LSM6DS3_PUSH_PULL:
+    case 0x00:
       *val = LSM6DS3_PUSH_PULL;
       break;
 
-    case LSM6DS3_OPEN_DRAIN:
+    case 0x01:
       *val = LSM6DS3_OPEN_DRAIN;
       break;
 
@@ -2976,11 +2976,11 @@ int32_t lsm6ds3_pin_polarity_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl3_c.h_lactive)
   {
-    case LSM6DS3_ACTIVE_HIGH:
+    case 0x00:
       *val = LSM6DS3_ACTIVE_HIGH;
       break;
 
-    case LSM6DS3_ACTIVE_LOW:
+    case 0x01:
       *val = LSM6DS3_ACTIVE_LOW;
       break;
 
@@ -3083,11 +3083,11 @@ int32_t lsm6ds3_int_notification_get(const stmdev_ctx_t *ctx,
 
   switch (tap_cfg.lir)
   {
-    case LSM6DS3_INT_PULSED:
+    case 0x00:
       *val = LSM6DS3_INT_PULSED;
       break;
 
-    case LSM6DS3_INT_LATCHED:
+    case 0x01:
       *val = LSM6DS3_INT_LATCHED;
       break;
 
@@ -3815,11 +3815,11 @@ int32_t lsm6ds3_tap_mode_get(const stmdev_ctx_t *ctx, lsm6ds3_tap_md_t *val)
 
   switch (wake_up_ths.single_double_tap)
   {
-    case LSM6DS3_ONLY_DOUBLE:
+    case 0x01:
       *val = LSM6DS3_ONLY_DOUBLE;
       break;
 
-    case LSM6DS3_SINGLE_DOUBLE:
+    case 0x00:
       *val = LSM6DS3_SINGLE_DOUBLE;
       break;
 
@@ -3889,11 +3889,11 @@ int32_t lsm6ds3_6d_feed_data_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl8_xl.low_pass_on_6d)
   {
-    case LSM6DS3_ODR_DIV_2_FEED:
+    case 0x00:
       *val = LSM6DS3_ODR_DIV_2_FEED;
       break;
 
-    case LSM6DS3_LPF2_FEED:
+    case 0x01:
       *val = LSM6DS3_LPF2_FEED;
       break;
 
@@ -3970,19 +3970,19 @@ int32_t lsm6ds3_6d_threshold_get(const stmdev_ctx_t *ctx,
 
   switch (tap_ths_6d.sixd_ths)
   {
-    case LSM6DS3_DEG_80:
+    case 0x00:
       *val = LSM6DS3_DEG_80;
       break;
 
-    case LSM6DS3_DEG_70:
+    case 0x01:
       *val = LSM6DS3_DEG_70;
       break;
 
-    case LSM6DS3_DEG_60:
+    case 0x02:
       *val = LSM6DS3_DEG_60;
       break;
 
-    case LSM6DS3_DEG_50:
+    case 0x03:
       *val = LSM6DS3_DEG_50;
       break;
 
@@ -4101,35 +4101,35 @@ int32_t lsm6ds3_ff_threshold_get(const stmdev_ctx_t *ctx,
 
   switch (free_fall.ff_ths)
   {
-    case LSM6DS3_156_mg:
+    case 0x00:
       *val = LSM6DS3_156_mg;
       break;
 
-    case LSM6DS3_219_mg:
+    case 0x01:
       *val = LSM6DS3_219_mg;
       break;
 
-    case LSM6DS3_250_mg:
+    case 0x02:
       *val = LSM6DS3_250_mg;
       break;
 
-    case LSM6DS3_312_mg:
+    case 0x03:
       *val = LSM6DS3_312_mg;
       break;
 
-    case LSM6DS3_344_mg:
+    case 0x04:
       *val = LSM6DS3_344_mg;
       break;
 
-    case LSM6DS3_406_mg:
+    case 0x05:
       *val = LSM6DS3_406_mg;
       break;
 
-    case LSM6DS3_469_mg:
+    case 0x06:
       *val = LSM6DS3_469_mg;
       break;
 
-    case LSM6DS3_500_mg:
+    case 0x07:
       *val = LSM6DS3_500_mg;
       break;
 
@@ -4317,11 +4317,11 @@ int32_t lsm6ds3_fifo_write_trigger_get(const stmdev_ctx_t *ctx,
 
   switch (fifo_ctrl2. timer_pedo_fifo_drdy)
   {
-    case LSM6DS3_TRG_XL_GY_DRDY:
+    case 0x00:
       *val = LSM6DS3_TRG_XL_GY_DRDY;
       break;
 
-    case LSM6DS3_TRG_STEP_DETECT:
+    case 0x01:
       *val = LSM6DS3_TRG_STEP_DETECT;
       break;
 
@@ -4432,35 +4432,35 @@ int32_t lsm6ds3_fifo_xl_batch_get(const stmdev_ctx_t *ctx,
 
   switch (fifo_ctrl3.dec_fifo_xl)
   {
-    case LSM6DS3_FIFO_XL_DISABLE:
+    case 0x00:
       *val = LSM6DS3_FIFO_XL_DISABLE;
       break;
 
-    case LSM6DS3_FIFO_XL_NO_DEC:
+    case 0x01:
       *val = LSM6DS3_FIFO_XL_NO_DEC;
       break;
 
-    case LSM6DS3_FIFO_XL_DEC_2:
+    case 0x02:
       *val = LSM6DS3_FIFO_XL_DEC_2;
       break;
 
-    case LSM6DS3_FIFO_XL_DEC_3:
+    case 0x03:
       *val = LSM6DS3_FIFO_XL_DEC_3;
       break;
 
-    case LSM6DS3_FIFO_XL_DEC_4:
+    case 0x04:
       *val = LSM6DS3_FIFO_XL_DEC_4;
       break;
 
-    case LSM6DS3_FIFO_XL_DEC_8:
+    case 0x05:
       *val = LSM6DS3_FIFO_XL_DEC_8;
       break;
 
-    case LSM6DS3_FIFO_XL_DEC_16:
+    case 0x06:
       *val = LSM6DS3_FIFO_XL_DEC_16;
       break;
 
-    case LSM6DS3_FIFO_XL_DEC_32:
+    case 0x07:
       *val = LSM6DS3_FIFO_XL_DEC_32;
       break;
 
@@ -4522,35 +4522,35 @@ int32_t lsm6ds3_fifo_gy_batch_get(const stmdev_ctx_t *ctx,
 
   switch (fifo_ctrl3.dec_fifo_gyro)
   {
-    case LSM6DS3_FIFO_GY_DISABLE:
+    case 0x00:
       *val = LSM6DS3_FIFO_GY_DISABLE;
       break;
 
-    case LSM6DS3_FIFO_GY_NO_DEC:
+    case 0x01:
       *val = LSM6DS3_FIFO_GY_NO_DEC;
       break;
 
-    case LSM6DS3_FIFO_GY_DEC_2:
+    case 0x02:
       *val = LSM6DS3_FIFO_GY_DEC_2;
       break;
 
-    case LSM6DS3_FIFO_GY_DEC_3:
+    case 0x03:
       *val = LSM6DS3_FIFO_GY_DEC_3;
       break;
 
-    case LSM6DS3_FIFO_GY_DEC_4:
+    case 0x04:
       *val = LSM6DS3_FIFO_GY_DEC_4;
       break;
 
-    case LSM6DS3_FIFO_GY_DEC_8:
+    case 0x05:
       *val = LSM6DS3_FIFO_GY_DEC_8;
       break;
 
-    case LSM6DS3_FIFO_GY_DEC_16:
+    case 0x06:
       *val = LSM6DS3_FIFO_GY_DEC_16;
       break;
 
-    case LSM6DS3_FIFO_GY_DEC_32:
+    case 0x07:
       *val = LSM6DS3_FIFO_GY_DEC_32;
       break;
 
@@ -4612,35 +4612,35 @@ int32_t lsm6ds3_fifo_dataset_3_batch_get(const stmdev_ctx_t *ctx,
 
   switch (fifo_ctrl4.dec_ds3_fifo)
   {
-    case LSM6DS3_FIFO_DS3_DISABLE:
+    case 0x00:
       *val = LSM6DS3_FIFO_DS3_DISABLE;
       break;
 
-    case LSM6DS3_FIFO_DS3_NO_DEC:
+    case 0x01:
       *val = LSM6DS3_FIFO_DS3_NO_DEC;
       break;
 
-    case LSM6DS3_FIFO_DS3_DEC_2:
+    case 0x02:
       *val = LSM6DS3_FIFO_DS3_DEC_2;
       break;
 
-    case LSM6DS3_FIFO_DS3_DEC_3:
+    case 0x03:
       *val = LSM6DS3_FIFO_DS3_DEC_3;
       break;
 
-    case LSM6DS3_FIFO_DS3_DEC_4:
+    case 0x04:
       *val = LSM6DS3_FIFO_DS3_DEC_4;
       break;
 
-    case LSM6DS3_FIFO_DS3_DEC_8:
+    case 0x05:
       *val = LSM6DS3_FIFO_DS3_DEC_8;
       break;
 
-    case LSM6DS3_FIFO_DS3_DEC_16:
+    case 0x06:
       *val = LSM6DS3_FIFO_DS3_DEC_16;
       break;
 
-    case LSM6DS3_FIFO_DS3_DEC_32:
+    case 0x07:
       *val = LSM6DS3_FIFO_DS3_DEC_32;
       break;
 
@@ -4702,35 +4702,35 @@ int32_t lsm6ds3_fifo_dataset_4_batch_get(const stmdev_ctx_t *ctx,
 
   switch (fifo_ctrl4.dec_ds4_fifo)
   {
-    case LSM6DS3_FIFO_DS4_DISABLE:
+    case 0x00:
       *val = LSM6DS3_FIFO_DS4_DISABLE;
       break;
 
-    case LSM6DS3_FIFO_DS4_NO_DEC:
+    case 0x01:
       *val = LSM6DS3_FIFO_DS4_NO_DEC;
       break;
 
-    case LSM6DS3_FIFO_DS4_DEC_2:
+    case 0x02:
       *val = LSM6DS3_FIFO_DS4_DEC_2;
       break;
 
-    case LSM6DS3_FIFO_DS4_DEC_3:
+    case 0x03:
       *val = LSM6DS3_FIFO_DS4_DEC_3;
       break;
 
-    case LSM6DS3_FIFO_DS4_DEC_4:
+    case 0x04:
       *val = LSM6DS3_FIFO_DS4_DEC_4;
       break;
 
-    case LSM6DS3_FIFO_DS4_DEC_8:
+    case 0x05:
       *val = LSM6DS3_FIFO_DS4_DEC_8;
       break;
 
-    case LSM6DS3_FIFO_DS4_DEC_16:
+    case 0x06:
       *val = LSM6DS3_FIFO_DS4_DEC_16;
       break;
 
-    case LSM6DS3_FIFO_DS4_DEC_32:
+    case 0x07:
       *val = LSM6DS3_FIFO_DS4_DEC_32;
       break;
 
@@ -4841,20 +4841,24 @@ int32_t lsm6ds3_fifo_mode_get(const stmdev_ctx_t *ctx,
 
   switch (fifo_ctrl5.fifo_mode)
   {
-    case LSM6DS3_BYPASS_MODE:
+    case 0x00:
       *val = LSM6DS3_BYPASS_MODE;
       break;
 
-    case LSM6DS3_FIFO_MODE:
+    case 0x01:
       *val = LSM6DS3_FIFO_MODE;
       break;
 
-    case  LSM6DS3_STREAM_TO_FIFO_MODE:
+    case 0x03:
       *val =  LSM6DS3_STREAM_TO_FIFO_MODE;
       break;
 
-    case  LSM6DS3_BYPASS_TO_STREAM_MODE:
+    case 0x04:
       *val =  LSM6DS3_BYPASS_TO_STREAM_MODE;
+      break;
+
+    case 0x06:
+      *val = LSM6DS3_STREAM_MODE;
       break;
 
     default:
@@ -4913,47 +4917,47 @@ int32_t lsm6ds3_fifo_data_rate_get(const stmdev_ctx_t *ctx,
 
   switch (fifo_ctrl5.odr_fifo)
   {
-    case LSM6DS3_FIFO_DISABLE:
+    case 0x00:
       *val = LSM6DS3_FIFO_DISABLE;
       break;
 
-    case LSM6DS3_FIFO_12Hz5:
+    case 0x01:
       *val = LSM6DS3_FIFO_12Hz5;
       break;
 
-    case LSM6DS3_FIFO_26Hz:
+    case 0x02:
       *val = LSM6DS3_FIFO_26Hz;
       break;
 
-    case LSM6DS3_FIFO_52Hz:
+    case 0x03:
       *val = LSM6DS3_FIFO_52Hz;
       break;
 
-    case LSM6DS3_FIFO_104Hz:
+    case 0x04:
       *val = LSM6DS3_FIFO_104Hz;
       break;
 
-    case LSM6DS3_FIFO_208Hz:
+    case 0x05:
       *val = LSM6DS3_FIFO_208Hz;
       break;
 
-    case LSM6DS3_FIFO_416Hz:
+    case 0x06:
       *val = LSM6DS3_FIFO_416Hz;
       break;
 
-    case LSM6DS3_FIFO_833Hz:
+    case 0x07:
       *val = LSM6DS3_FIFO_833Hz;
       break;
 
-    case LSM6DS3_FIFO_1k66Hz:
+    case 0x08:
       *val = LSM6DS3_FIFO_1k66Hz;
       break;
 
-    case LSM6DS3_FIFO_3k33Hz:
+    case 0x09:
       *val = LSM6DS3_FIFO_3k33Hz;
       break;
 
-    case LSM6DS3_FIFO_6k66Hz:
+    case 0x0A:
       *val = LSM6DS3_FIFO_6k66Hz;
       break;
 
@@ -5242,23 +5246,23 @@ int32_t lsm6ds3_den_mode_get(const stmdev_ctx_t *ctx,
 
   switch (ctrl6_c.den_mode)
   {
-    case LSM6DS3_DEN_DISABLE:
+    case 0x00:
       *val = LSM6DS3_DEN_DISABLE;
       break;
 
-    case LSM6DS3_LEVEL_FIFO:
+    case 0x06:
       *val = LSM6DS3_LEVEL_FIFO;
       break;
 
-    case LSM6DS3_LEVEL_LETCHED:
+    case 0x03:
       *val = LSM6DS3_LEVEL_LETCHED;
       break;
 
-    case LSM6DS3_LEVEL_TRIGGER:
+    case 0x02:
       *val = LSM6DS3_LEVEL_TRIGGER;
       break;
 
-    case LSM6DS3_EDGE_TRIGGER:
+    case 0x04:
       *val = LSM6DS3_EDGE_TRIGGER;
       break;
 
@@ -5571,11 +5575,11 @@ int32_t lsm6ds3_pedo_full_scale_get(const stmdev_ctx_t *ctx,
   {
     switch (pedo_ths_reg.pedo_4g)
     {
-      case LSM6DS3_PEDO_AT_2g:
+      case 0x00:
         *val = LSM6DS3_PEDO_AT_2g;
         break;
 
-      case LSM6DS3_PEDO_AT_4g:
+      case 0x01:
         *val = LSM6DS3_PEDO_AT_4g;
         break;
 
@@ -6543,11 +6547,11 @@ int32_t lsm6ds3_sh_pin_mode_get(const stmdev_ctx_t *ctx,
 
   switch (master_config.pull_up_en)
   {
-    case LSM6DS3_EXT_PULL_UP:
+    case 0x00:
       *val = LSM6DS3_EXT_PULL_UP;
       break;
 
-    case LSM6DS3_INTERNAL_PULL_UP:
+    case 0x01:
       *val = LSM6DS3_INTERNAL_PULL_UP;
       break;
 
@@ -6607,11 +6611,11 @@ int32_t lsm6ds3_sh_syncro_mode_get(const stmdev_ctx_t *ctx,
 
   switch (master_config.start_config)
   {
-    case LSM6DS3_XL_GY_DRDY:
+    case 0x00:
       *val = LSM6DS3_XL_GY_DRDY;
       break;
 
-    case LSM6DS3_EXT_ON_INT2_PIN:
+    case 0x01:
       *val = LSM6DS3_EXT_ON_INT2_PIN;
       break;
 
@@ -6967,11 +6971,11 @@ int32_t lsm6ds3_xl_hp_path_internal_get(const stmdev_ctx_t *ctx,
 
   switch (reg.slope_fds)
   {
-    case LSM6DS3_USE_SLOPE:
+    case 0x00:
       *val = LSM6DS3_USE_SLOPE;
       break;
 
-    case LSM6DS3_USE_HPF:
+    case 0x01:
       *val = LSM6DS3_USE_HPF;
       break;
 
@@ -7046,19 +7050,19 @@ int32_t lsm6ds3_sh_num_of_dev_connected_get(const stmdev_ctx_t *ctx,
   {
     switch (reg.aux_sens_on)
     {
-      case LSM6DS3_SLV_0:
+      case 0x00:
         *val = LSM6DS3_SLV_0;
         break;
 
-      case LSM6DS3_SLV_0_1:
+      case 0x01:
         *val = LSM6DS3_SLV_0_1;
         break;
 
-      case LSM6DS3_SLV_0_1_2:
+      case 0x02:
         *val = LSM6DS3_SLV_0_1_2;
         break;
 
-      case LSM6DS3_SLV_0_1_2_3:
+      case 0x03:
         *val = LSM6DS3_SLV_0_1_2_3;
         break;
 
